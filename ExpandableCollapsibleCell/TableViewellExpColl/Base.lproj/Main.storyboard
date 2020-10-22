@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="TableViewellExpColl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CSH-7K-zRc">
+                                <rect key="frame" x="20" y="44" width="374" height="650"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="180" id="vkD-6l-f6Z" customClass="TeamCell" customModule="TableViewellExpColl" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vkD-6l-f6Z" id="gli-z1-M9g">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Bull Racing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iep-pR-Ifa">
+                                                    <rect key="frame" x="20" y="33" width="250" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="PGJ-Qq-0Ou"/>
+                                                        <constraint firstAttribute="width" constant="250" id="q3B-BT-o1M"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some description about the team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWI-QG-IrI">
+                                                    <rect key="frame" x="20" y="93" width="240" height="66"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="66" id="9jh-E9-5Al"/>
+                                                        <constraint firstAttribute="width" constant="240" id="SKU-xQ-jUx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iep-pR-Ifa" firstAttribute="top" secondItem="gli-z1-M9g" secondAttribute="topMargin" constant="22" id="4JE-hP-V8Y"/>
+                                                <constraint firstItem="iep-pR-Ifa" firstAttribute="leading" secondItem="gli-z1-M9g" secondAttribute="leadingMargin" id="K2u-zc-zbf"/>
+                                                <constraint firstItem="BWI-QG-IrI" firstAttribute="top" secondItem="iep-pR-Ifa" secondAttribute="bottom" constant="20" id="NOH-hV-aJd"/>
+                                                <constraint firstItem="BWI-QG-IrI" firstAttribute="leading" secondItem="gli-z1-M9g" secondAttribute="leadingMargin" id="mZz-4h-OM9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="message" destination="BWI-QG-IrI" id="U5X-v3-Ot7"/>
+                                            <outlet property="title" destination="iep-pR-Ifa" id="yJh-Tc-vl8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CSH-7K-zRc" secondAttribute="bottom" constant="168" id="G3g-mi-8ka"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CSH-7K-zRc" secondAttribute="trailing" constant="20" id="pfS-xu-sWh"/>
+                            <constraint firstItem="CSH-7K-zRc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qX3-bq-60K"/>
+                            <constraint firstItem="CSH-7K-zRc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zw1-4Z-Ndc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="f1TableView" destination="CSH-7K-zRc" id="ETT-yl-izX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49.275362318840585" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
